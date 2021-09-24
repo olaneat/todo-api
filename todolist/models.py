@@ -16,8 +16,8 @@ class TaskList(models.Model):
 class Task(models.Model):
     task = models.TextField()
     due_date = models.DateField(auto_now=True)
-    due_time = models.DateTimeField(default=True)
-    task_lists = models.ForeignKey(TaskList, blank=True, null=True, on_delete=models.CASCADE, related_name='task_lists') 
+    due_time = models.DateTimeField(auto_now=True)
+    task_list = models.CharField(max_length=250, choices=task_list) 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)
 

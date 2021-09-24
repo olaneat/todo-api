@@ -1,14 +1,13 @@
-from rest_framework import serialilzers 
+from rest_framework import serializers 
 from .models import Task, TaskList
 
-class TaskListSerializer(serialilzers.Serializer):
+class TaskListSerializer(serializers.ModelSerializer):
     class Meta:
         model = TaskList
         fields = '__all__'
 
 
-class TaskSerializer(serializers.Serializer):
-    task_list = TaskListSerializer()
+class TaskSerializer(serializers.ModelSerializer):
     class Meta:
         model = Task
         fields = ('task', 'due_date', 'task_list',)
