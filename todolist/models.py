@@ -17,7 +17,7 @@ class Task(models.Model):
     id = models.UUIDField(editable=False, default=uuid.uuid4, max_length=37, unique=True, primary_key=True)
     task = models.TextField()
     due_date = models.DateField(auto_now=True)
-    task_list = models.CharField(max_length=250, choices=task_list) 
+    task_list = models.CharField(max_length=250) 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)
 
