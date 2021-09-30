@@ -3,5 +3,8 @@ task_list = [
     ('Personal', 'Personal'),
     ('WishList', 'WishList'),
     ('Work', 'Work'),
-    ('All', 'All List')
+    ('All', 'All'),
+    ('Default', 'Default')
 ]
+
+    
